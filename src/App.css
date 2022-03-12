@@ -1,38 +1,117 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  animation: 25000ms ease-in-out infinite color-change;
+   
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  height: 100vh;
+  max-width: 500px;
+  width: 100%;
+  margin: auto;
+}
+.container > form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+  width: 80%;
+  border-radius: 20px;
+  background: rgb(247, 247, 247);
+}
+h1 {
+  margin-bottom: 2rem;
+  color: rgb(90, 90, 90);
+}
+.form-field {
+  width: 380px;
+  margin-top: 24px;
+  margin-bottom: 2px;
 }
 
-.App-link {
-  color: #61dafb;
+input {
+  margin: 0 2rem;
+  padding: 18px 0 18px 22px;
+  font-weight: 500;
+  border-radius: 50px;
+  border: none;
+  outline: none;
+  box-shadow: 0 0 10px 1px #b6b5b5;
+  width: 80%;
+}
+input[type="text"] {
+    font-size: 16px;
+    color: rgb(56, 55, 55);
+}
+::placeholder { 
+  font-size: 1rem;
+  font-weight: 500;
+  color: rgb(90, 90, 90);
+  opacity: 2; 
+}
+.btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+button {
+  margin-top: 25px ;
+  padding: 10px;
+  background: #0563b4;
+  padding: 15px 35px;
+  color: #dfdfdf;
+  font-weight: 600;
+  border: none;
+  border-radius: 50px;
+  font-size: 14px;
+}
+.error-input {
+  color: rgb(240, 24, 24);
+  font-size: 14px;
+  font-weight: 500;
+  padding-left: 3.2rem;
+}
+.successful-message {
+  color: blue;
+  font-weight: 600;
+  padding-top: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+
+@keyframes color-change {
+  0% {
+    background-color: teal;
   }
-  to {
-    transform: rotate(360deg);
+  20% {
+    background-color: #5e725f;
   }
+  40% {
+    background-color: #3f2b96;
+  }
+  60% {
+    background-color: #6386df;
+  }
+  80% {
+    background-color: #a17fe0;
+  }
+  100% {
+    background-color: #5d26c1;
+  }
+}
+
+@media screen and (max-width: 30em) and (orientation: landscape) {
+  .container {
+    max-width: 280px;
+  }
+    
 }
