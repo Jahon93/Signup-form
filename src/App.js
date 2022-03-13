@@ -46,6 +46,7 @@ function App() {
       <form onSubmit={handleSubmit}>
         <h1>Sign Up</h1>
         <div className="form">
+
           <div className="form-field">
             <input
               type="text"
@@ -56,6 +57,7 @@ function App() {
             />
           </div>
           <p className="error-input">{formErrors.name}</p>
+
           <div className="form-field">
             <input
               type="text"
@@ -66,6 +68,7 @@ function App() {
             />
           </div>
           <p className="error-input">{formErrors.email}</p>
+          
           <div className="form-field">
             <input
               type="password"
